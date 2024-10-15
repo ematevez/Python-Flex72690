@@ -3,7 +3,7 @@
 Título: Introducción a las Tuplas en Python
 Descripción: Este archivo muestra ejemplos de cómo utilizar tuplas en Python,
 explicando paso a paso sus características y uso práctico.
-Autor: ChatGPT
+
 """
 
 #? Definición de Tuplas: Se definen tuplas con diferentes tipos de datos, mostrando cómo se pueden almacenar elementos heterogéneos.

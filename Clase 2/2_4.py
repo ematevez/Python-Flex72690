@@ -43,27 +43,34 @@ alumno = {
 # Accediendo a valores utilizando claves
 nombre_alumno = alumno["nombre"]  # "Ana"
 edad_alumno = alumno["edad"]  # 22
-print(f"Nombre del alumno: {nombre_alumno}, Edad: {edad_alumno}")
+curso_alumno = alumno["curso"] # Matematica
+print(f"Nombre del alumno: {nombre_alumno}, Edad: {edad_alumno}, Curso: {curso_alumno}" )
+print("=================================")
 
 # Modificación de Valores
 # Los diccionarios son mutables
 # Modificando un valor existente
-alumno["edad"] = 23  # La edad ahora es 23
+alumno["edad"] = 43  # La edad ahora es 43
 print(f"Edad actualizada: {alumno['edad']}")
+print(f"Diccionario actualizado edad: {alumno}")
+print("=================================")
 
 # Agregando un nuevo par clave-valor
 alumno["ciudad"] = "Barcelona"  # Se añade la clave "ciudad" con el valor "Barcelona"
 print(f"Diccionario actualizado con ciudad: {alumno}")
+print("=================================")
 
 # Eliminando un par clave-valor
 del alumno["curso"]  # Se elimina la clave "curso" y su valor
 print(f"Diccionario después de eliminar curso: {alumno}")
+print("=================================")
 
-# Métodos Útiles de los Diccionarios
+# # Métodos Útiles de los Diccionarios
 
 # keys(): Devuelve una vista de las claves del diccionario.
 claves = alumno.keys()  
 print(f"Claves del diccionario: {list(claves)}")
+print("=================================")
 
 # values(): Devuelve una vista de los valores del diccionario.
 valores = alumno.values()
@@ -72,29 +79,34 @@ print(f"Valores del diccionario: {list(valores)}")
 # items(): Devuelve una vista de los pares clave-valor del diccionario.
 items = alumno.items()  
 print(f"Pares clave-valor: {list(items)}")
+print(f"Pares clave-valor: {tuple(items)}")
+print("=================================")
 
 # get(): Devuelve el valor para una clave dada, o None si la clave no existe.
 curso = alumno.get("curso")  # None, ya que la clave "curso" fue eliminada
+ciudad = alumno.get("ciudad")  # None, ya que la clave "ciudad" fue eliminad
 print(f"El curso del alumno es: {curso}")
+print(f"El curso del ciudad es: {ciudad}")
+print("=================================")
 
 # update(): Actualiza el diccionario con los pares clave-valor de otro diccionario.
 alumno.update({"edad": 24, "curso": "Física"})  # Actualiza la edad y añade el curso
 print(f"Diccionario después de update: {alumno}")
 
-# Funciones adicionales con Diccionarios
+# # Funciones adicionales con Diccionarios
 
-# len(): Devuelve el número de pares clave-valor en el diccionario.
-print(f"Cantidad de elementos en el diccionario: {len(alumno)}")
+# # len(): Devuelve el número de pares clave-valor en el diccionario.
+# print(f"Cantidad de elementos en el diccionario: {len(alumno)}")
 
-# del: Elimina un par clave-valor usando la clave
-del alumno["curso"]  # Eliminar la clave "curso"
-print(f"Diccionario después de eliminar el curso: {alumno}")
+# # del: Elimina un par clave-valor usando la clave
+# del alumno["curso"]  # Eliminar la clave "curso"
+# print(f"Diccionario después de eliminar el curso: {alumno}")
 
-# clear(): Elimina todos los elementos del diccionario.
-alumno.clear()  # Elimina todos los elementos
-print(f"Diccionario vacío: {alumno}")
+# # clear(): Elimina todos los elementos del diccionario.
+# alumno.clear()  # Elimina todos los elementos
+# print(f"Diccionario vacío: {alumno}")
 
-# Ejemplo final de inventario
-print(f"Inventario: {inventario}")
-inventario.update({"naranjas": 10, "uvas": 8})  # Actualizando y agregando elementos
-print(f"Inventario actualizado: {inventario}")
+# # Ejemplo final de inventario
+# print(f"Inventario: {inventario}")
+# inventario.update({"naranjas": 10, "uvas": 8})  # Actualizando y agregando elementos
+# print(f"Inventario actualizado: {inventario}")
