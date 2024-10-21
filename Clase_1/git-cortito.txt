@@ -1,0 +1,92 @@
+Si quieres APRENDER PROGRAMACIÓN, debes conocer GIT.
+
+Git es el sistema de control de versiones distribuido, de código abierto y gratuito utilizado por el 95% del sector.
+
+AQUÍ tienes los 10 COMANDOS MÁS UTILIZADOS de GIT y CÓMO FUNCIONAN.
+
+Lo primero que debes de conocer es su web oficial:
+
+🔗 https://git-scm.com
+
+ℹ️ La famosa plataforma GitHub sirve para alojar nuestro código usando Git.
+ℹ️ Ah, fue diseñado por Linus Torvalds (sí, a parte de crear Linux).
+
+Ahí van los 10 comandos...
+
+1️⃣ git config
+
+Establece el nombre y el email del autor que realizará las acciones contra el repositorio de código de git actual.
+
+Ejemplo:
+git config user.name "usuario"
+git config user.email "email"
+
+2️⃣ git status
+
+Te muestra el estado de la rama de Git actual. Si ficheros por subir o añadir, si no estás actualizado...
+
+3️⃣ git clone
+
+Descarga (clona) el repositorio remoto en local.
+
+Ejemplo:
+git clone [url]
+
+4️⃣ git branch
+
+Crea una rama a partir de la actual
+
+Ejemplo:
+git branch [nombrerama]
+También puedes borrarla con git branch -d [nombrerama]
+
+5️⃣ git checkout
+
+Te sitúa en la rama o commit indicado.
+
+Ejemplo:
+git checkout [nombrerama/hash]
+
+6️⃣ git pull
+
+Recupera la última información de la rama descargando esos cambios a la local.
+
+git fetch hace lo mismo pero no descarga los cambios. Así puedes comprobar si ha cambiado algo.
+#7 8 y 9
+7️⃣ git add
+
+Añade ficheros y cambios que has realizado en tu rama locar para poder subirlos posteriormente a la rama remota.
+
+Ejemplo:
+git add [fichero]
+También puedes añadir todos los ficheros modificados con git add .
+
+8️⃣ git commit
+
+Confirma que los archivos que has modificado y añadido están preparados para subir a la rama remota.
+
+Ejemplo:
+SIEMPRE haz commit con mensaje!! git commit -m "mensaje"
+Para añadir directamente los ficheros modificados y hacer commit haz git commit -a
+
+9️⃣ git push
+
+Una vez haz hecho commit, envía tus cambios al servidor. Así podrán ser descargados por el resto de personas con acceso a esa rama del repositorio remoto.
+
+Ejemplo:
+git push [nombrerama]
+
+🔟 git log
+
+Muestra el historial de ramas y sus commits.
+
+Ejemplo:
+git log
+Para ver una versión resumida usa git log --oneline
+Para ver una versión en forma de gráfico usa git log --graph
+
+Si quieres aprender estos y muchos más, tengo un curso 100% gratis de 5 horas para aprender Git y GitHub desde cero:
+
+🔗 mouredev.com/git
+
+Aprender Git es una habilidad esencial solicitada por cualquier empresa... Y podrás colaborar y mantener tu código seguro.
