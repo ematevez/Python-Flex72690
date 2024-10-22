@@ -1,11 +1,11 @@
 # 3.1 Introducción a las Colecciones en Python
-
-# Listas
-# Las listas son colecciones ordenadas y mutables de elementos.
+#!========================================================================
+# # Listas
+# # Las listas son colecciones ordenadas y mutables de elementos.
 
 print("\n--- LISTAS ---")
 
-# Crear una lista
+# # Crear una lista
 mi_lista = [10, 20, 30, 40]
 print(f"Lista original: {mi_lista}")
 
@@ -18,8 +18,8 @@ mi_lista.extend([60, 70])
 print(f"Después de extend([60, 70]): {mi_lista}")
 
 # insert(i, x): Inserta un ítem en la posición dada.
-mi_lista.insert(2, 25)  # Inserta 25 en la posición 2
-print(f"Después de insert(2, 25): {mi_lista}")
+mi_lista.insert(100, 25)  # Inserta 25 en la posición 2
+print(f"Después de insert(5, 25): {mi_lista}")
 
 # remove(x): Elimina el primer ítem cuyo valor sea x.
 mi_lista.remove(25)
@@ -28,6 +28,10 @@ print(f"Después de remove(25): {mi_lista}")
 # pop([i]): Elimina el ítem en la posición dada de la lista y lo devuelve.
 eliminado = mi_lista.pop(2)  # Elimina el ítem en la posición 2
 print(f"Elemento eliminado con pop(2): {eliminado}, Lista actual: {mi_lista}")
+
+# # pop([i]): Elimina el ítem en la posición dada de la lista y si no esta dentro del rango da erro.
+# eliminado = mi_lista.pop(150)  # Elimina el ítem en la posición 2
+# print(f"Elemento eliminado con pop(150): {eliminado}, Lista actual: {mi_lista}")
 
 # clear(): Elimina todos los elementos de la lista.
 mi_lista.clear()
@@ -56,6 +60,7 @@ print(f"Lista invertida: {mi_lista}")
 mi_lista_copia = mi_lista.copy()
 print(f"Copia de la lista: {mi_lista_copia}")
 
+#!========================================================================
 # Conjuntos
 # Los conjuntos son colecciones no ordenadas y no permiten duplicados.
 
@@ -117,6 +122,7 @@ print(f"A es superconjunto de B: {es_superconjunto}")
 copia_conjunto = A.copy()
 print(f"Copia del conjunto A: {copia_conjunto}")
 
+#!========================================================================
 # Diccionarios
 # Los diccionarios son colecciones de pares clave-valor.
 

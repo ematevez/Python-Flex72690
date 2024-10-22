@@ -6,7 +6,7 @@
 # Suma (+)
 a = 5
 b = 3
-print(f"Suma: {a} + {b} = {a + b}")  # Salida: 8
+# print(f"Suma: {a} + {b} = {a + b}")  # Salida: 8
 
 # Resta (-)
 print(f"Resta: {a} - {b} = {a - b}")  # Salida: 2
@@ -68,7 +68,7 @@ print(f"Menor o igual que: {a} <= {b} = {a <= b}")  # Salida: False
 # Vamos a utilizar estos operadores para resolver problemas sencillos
 
 # Ejemplo 1: Verificar si una persona tiene la edad suficiente para votar.
-edad = 18
+edad = 15
 edad_minima_para_votar = 16
 puede_votar = edad >= edad_minima_para_votar
 print(f"¿La persona puede votar? {puede_votar}")  # Salida: True
@@ -79,13 +79,23 @@ descuento = 20  # en porcentaje
 precio_final = precio_original - (precio_original * descuento / 100)
 print(f"El precio final con un descuento del {descuento}% es: {precio_final}")  # Salida: 80.0
 
-# Ejemplo 3: Combinando operadores lógicos y aritméticos
+# Ejemplo 3: Combinando operadores lógicos y aritméticos Tabla AND
 # Verificar si un número está en un rango específico
 numero = 7
-limite_inferior = 5
+limite_inferior = 8
 limite_superior = 10
 esta_en_rango = numero >= limite_inferior and numero <= limite_superior
 print(f"¿El número {numero} está entre {limite_inferior} y {limite_superior}? {esta_en_rango}")  # Salida: True
+
+# Ejemplo 4: Combinando operadores lógicos y aritméticos Tabla OR
+# Verificar si un número está en un rango específico
+numero = 7
+limite_inferior = 8
+limite_superior = 10
+esta_en_rango = numero >= limite_inferior or numero <= limite_superior
+print(f"¿El número {numero} está entre {limite_inferior} y {limite_superior}? {esta_en_rango}")  # Salida: True
+
+
 
 # Ejemplo adicional: Validación de contraseña con operadores relacionales y lógicos
 password_correcto = "abc123"

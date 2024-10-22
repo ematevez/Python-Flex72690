@@ -16,30 +16,13 @@ Interactividad: En la actividad 3 y la actividad de expresiones anidadas, se inc
 
 """
 
-
-texto_original = (
-    "gordon lanzó su curva&strawberry ha fallado por un pie! "
-    "-gritó Joe Castiglione&dos pies -le corrigió Troop&"
-    "strawberry menea la cabeza como disgustado… -agrega el comentarista"
-)
-
-# Transformamos el texto en una lista utilizando '&' como separador
-partes = texto_original.split('&')
-
-# Limpiamos y formateamos cada parte
-partes_formateadas = [parte.strip().capitalize() + '.' for parte in partes]
-
-# Imprimimos el resultado
-for parte in partes_formateadas:
-    print(parte)
-
-print("\n--- Fin de la Actividad Colecciones 1 ---\n")
-
+#! Descripción de la actividad Practica 1. 
+#! Utilizando todo lo que sabes sobre cadenas, listas y sus métodos internos, transforma este texto:
 
 # Actividad: Colecciones 2
 # Consigna: Analizar e interpretar los siguientes conjuntos en Python.
 
-# Ejemplo 1: Unión de conjuntos
+# # Ejemplo 1: Unión de conjuntos
 my_set_1 = set([1, 2, 3])
 my_set_2 = set([3, 4, 5])
 my_new_set = my_set_1.union(my_set_2)
@@ -50,7 +33,7 @@ my_new_set_intersection = my_set_1.intersection(my_set_2)
 print("Intersección de conjuntos:", my_new_set_intersection)
 
 # Ejemplo 3: Diferencia de conjuntos
-my_new_set_difference = my_set_1.difference(my_set_2)
+my_new_set_difference = my_set_2.difference(my_set_1)
 print("Diferencia de conjuntos:", my_new_set_difference)
 
 print("\n--- Fin de la Actividad Colecciones 2 ---\n")
@@ -71,6 +54,18 @@ else:
     print("La divisa no se encuentra disponible.")
 
 print("\n--- Fin de la Actividad Colecciones 3 ---\n")
+
+
+#CODIGO DE DANIEL =============================================
+# dicc = {'Dolar':'$','Euro':'€', 'Libra':'£'}
+# divisa = input('Ingrese el tipo de divisa (Dolar, Euro, Libra):')
+ 
+# if (divisa == 'Dolar') or (divisa == 'Euro') or (divisa == 'Libra'):
+#     print(f'El simbolo de {divisa} es {dicc.get(divisa)}')
+# else:
+#     print(f'No existe la divisa {divisa}.')
+
+
 
 
 # Actividad: Operadores relacionales
@@ -113,15 +108,20 @@ print("\n--- Fin de la Actividad Operadores Lógicos ---\n")
 # Actividad: Expresiones anidadas
 # Consigna: Crear una variable que almacene si se cumplen todas las condiciones.
 
+"""
+NOMBRE sea diferente de cuatro asteriscos “****”
+EDAD sea mayor que 5 y a su vez menor que 20
+Que la longitud de NOMBRE sea mayor o igual a 4  pero a la vez menor que 8
+EDAD multiplicada por 3 sea mayor que 35
+
+"""
+
 nombre = input("Ingrese su nombre: ")
 edad = int(input("Ingrese su edad: "))
 
 # Verificamos las condiciones
 condiciones_cumplidas = (
-    nombre != "" and
-    5 < edad < 20 and
-    4 <= len(nombre) < 8 and
-    edad * 3 > 35
+    nombre != "" and 5 < edad < 20 and 4 <= len(nombre) < 8 and edad * 3 > 35
 )
 
 # Resultado de las condiciones

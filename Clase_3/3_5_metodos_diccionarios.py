@@ -1,5 +1,3 @@
-# metodos_diccionarios.py
-
 # Introducción a los Diccionarios en Python
 # Los diccionarios son estructuras de datos que almacenan pares clave-valor.
 # Son útiles cuando necesitas asociar valores con identificadores únicos.

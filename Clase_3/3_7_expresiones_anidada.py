@@ -36,7 +36,7 @@ def main():
     resultado = 3 == 3
     print(f"7. 3 == 3 = {resultado} # Salida: {resultado}")
 
-    # 8. Operadores Lógicos
+    #! 8. Operadores Lógicos
     resultado = not (3 > 5 and 2 < 4) or 4 == 4
     print(f"8. not (3 > 5 and 2 < 4) or 4 == 4 = {resultado} # Salida: {resultado}")
 

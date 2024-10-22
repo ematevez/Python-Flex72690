@@ -1,5 +1,6 @@
 """
 No hay 3.8 es un video de cierre de unidad
+
 Solución Paso a Paso
 
 Crear una lista original: Se crea una lista inicial que contiene números, algunos de los cuales son duplicados.
@@ -19,8 +20,6 @@ Devolver la lista modificada: La función devuelve la lista final.
 Comprobar la suma: Se verifica que la suma de los elementos a partir del segundo concuerda con el primer número de la lista.
 
 """
-
-# colecciones.py
 
 def procesar_lista(lista_original):
     # Paso 1: Borrar los elementos duplicados
@@ -62,7 +61,7 @@ def procesar_lista_comprension(lista_original):
     
     return lista_sin_impares
 
-# Alternativa 2: Usando filter para eliminar impares
+#! Alternativa 2: Usando filter para eliminar impares muy dificil no imposible
 def procesar_lista_filter(lista_original):
     lista_sin_duplicados = list(set(lista_original))
     lista_sin_duplicados.sort(reverse=True)
@@ -78,21 +77,49 @@ def procesar_lista_filter(lista_original):
     
     return lista_sin_impares
 
+
+def alternativa(listanumeros):
+    #que en algun numero,
+    for numero in listanumeros:
+        #calcular residuo de numero sobre 2, 
+        if numero % 2 == 1:
+            listanumeros.remove(numero)
+            print(f" removiendo {numero} por ser impar")
+        #mientras que haya algun numero repetido -con un count mayor a uno-
+        while listanumeros.count(numero) > 1:
+            #remover la ultima incidencia de ese numero           
+            listanumeros.remove(numero)
+            print(f"removiendo duplicado de  {numero}. lista parcialmente depurada {listanumeros}") 
+    listanumeros.sort(reverse=True)
+    print(f"lista depurada {listanumeros}")
+
+
+
+
+
+
+
+
 # Lista inicial
 lista = [29, -5, -12, 17, 5, 24, 5, 12, 23, 16, 12, 5, -12, 17]
 
 # Ejecutar las funciones
+print("============================================================")
 print("Resultado con procesamiento estándar:")
 resultado = procesar_lista(lista)
 print(f"Lista modificada: {resultado}\n")
-
+print("============================================================")
 print("Resultado con comprensión de listas:")
 resultado_comprension = procesar_lista_comprension(lista)
 print(f"Lista modificada: {resultado_comprension}\n")
-
+print("============================================================")
 print("Resultado con filter:")
 resultado_filter = procesar_lista_filter(lista)
 print(f"Lista modificada: {resultado_filter}\n")
+print("============================================================")
+print("Resultado by OMAR:")
+alternativa(lista)
+
 
 
 """
