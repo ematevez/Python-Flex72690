@@ -15,3 +15,5 @@
 ### 3 - Métodos de Colecciones y Operadores Básicos
 
 ### 4 - Control de Flujo
+
+### 5 - Funciones en Python
