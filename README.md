@@ -17,3 +17,5 @@
 ### 4 - Control de Flujo
 
 ### 5 - Funciones en Python
+
+### 6 - Errores POO (Pre-entrega)
