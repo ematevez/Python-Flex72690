@@ -5,8 +5,8 @@ class SpecialMethodsDemo:
         self.value = value
 
     # __str__: Representación amigable para usuarios
-    # def __str__(self):
-    #     return f"Item: {self.name}, Value: {self.value}"
+    def __str__(self):
+        return f"Item: {self.name}, Value: {self.value}"
 
     # __repr__: Representación para desarrolladores
     def __repr__(self):
