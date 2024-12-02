@@ -21,3 +21,5 @@
 ### Clase 6 - Errores POO (Pre-entrega)
 
 ### Clase 7 - Programación Orientada a Objetos II y Herencias
+
+### Clase 8: Manejo de Archivos y Datos en Python
