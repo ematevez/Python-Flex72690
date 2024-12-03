@@ -26,7 +26,7 @@ def leer_csv_sin_pandas(ruta):
         print(f"Ocurrió un error al leer el archivo: {e}")
 
 # Ruta al archivo cargado
-ruta_archivo = 'disney_plus_titles.csv'
+ruta_archivo = 'Bitcoin_Historical_Data.csv'
 
 # Llamar a la función para leer y mostrar los datos
 leer_csv_sin_pandas(ruta_archivo)

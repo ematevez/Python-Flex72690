@@ -1,0 +1,19 @@
+{
+    "resultados": [
+        {
+            "nombre": "Juan",
+            "edad": 28,
+            "opini\u00f3n": "Me gusta"
+        },
+        {
+            "nombre": "Ana",
+            "edad": 34,
+            "opini\u00f3n": "No me gusta"
+        },
+        {
+            "nombre": "Pedro",
+            "edad": 23,
+            "opini\u00f3n": "Me encanta"
+        }
+    ]
+}

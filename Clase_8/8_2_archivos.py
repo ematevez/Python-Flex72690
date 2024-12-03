@@ -90,7 +90,7 @@ if __name__ == "__main__":
 
 
 
-# # Si no existe el archivo
+# # Si no existe el archivo para que no de error
 # def crear_txt_si_no_existe(ruta, contenido):
 #     try:
 #         if not os.path.exists(ruta):

@@ -27,7 +27,7 @@ def introduccion():
 # Función 1: Crear y escribir en un archivo de texto
 def escribir_archivo_texto():
     print("\nEjemplo 1: Escribir en un archivo de texto")
-    with open("datos.txt", "w") as archivo:
+    with open("datos.txt", "a") as archivo:
         archivo.write("Este es un ejemplo de archivo de texto.\n")
         archivo.write("Aprender a manejar archivos es importante.\n")
     print("Archivo 'datos.txt' creado y datos escritos.")

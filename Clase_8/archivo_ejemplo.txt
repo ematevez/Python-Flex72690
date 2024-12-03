@@ -1,0 +1,3 @@
+Hola, mundo
+Este es un archivo de texto creado desde Python.
+Vamos a aprender a manejar archivos paso a paso.

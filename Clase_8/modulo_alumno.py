@@ -13,3 +13,8 @@ class Alumno:
         print(f"Alumno: {self.nombre}")
         print(f"Nota: {self.nota}")
 
+
+class Perro:
+    
+    def ladro():
+        print("Guau")
