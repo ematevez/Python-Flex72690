@@ -1,0 +1,194 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang3082{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\ul\b\f0\fs28\lang10 Gu\'eda Did\'e1ctica: Creaci\'f3n de una Aplicaci\'f3n Django con el Patr\'f3n MTV\ulnone\b0\fs22\par
+\par
+Esta gu\'eda te llevar\'e1 paso a paso por el proceso de crear un proyecto Django utilizando el patr\'f3n de arquitectura MTV (Model-Template-View). Vamos a desarrollar una aplicaci\'f3n llamada AppCoder, que incluye modelos para estudiantes, profesores, entregables y cursos.\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 1: Crear un Proyecto Django\b0\fs22\par
+
+\pard\sa200\sl276\slmult1 Primero, abre tu terminal y navega al directorio donde deseas crear tu proyecto. Luego, ejecuta el siguiente comando para iniciar un nuevo proyecto Django llamado MiProyecto:\par
+\par
+django-admin startproject MiProyecto .\par
+cd MiProyecto\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 2: Crear una Aplicaci\'f3n\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Dentro del proyecto, crearemos una aplicaci\'f3n llamada AppCoder:\par
+\par
+python manage.py startapp AppCoder\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b Paso 3: Definir los Modelos (Model)\par
+
+\pard\sa200\sl276\slmult1\b0\par
+Los modelos representan las tablas de la base de datos. Abre el archivo models.py en el directorio de AppCoder y define los siguientes modelos:\par
+\par
+from django.db import models\par
+\par
+class Estudiante(models.Model):\par
+    nombre = models.CharField(max_length=100)\par
+    apellido = models.CharField(max_length=100)\par
+    email = models.EmailField()\par
+\par
+    def __str__(self):\par
+        return f"\{self.nombre\} \{self.apellido\}"\par
+\par
+class Profesor(models.Model):\par
+    nombre = models.CharField(max_length=100)\par
+    apellido = models.CharField(max_length=100)\par
+    email = models.EmailField()\par
+    profesion = models.CharField(max_length=100)\par
+\par
+    def __str__(self):\par
+        return f"\{self.nombre\} \{self.apellido\} - \{self.profesion\}"\par
+\par
+class Curso(models.Model):\par
+    nombre = models.CharField(max_length=100)\par
+    camada = models.IntegerField()\par
+\par
+    def __str__(self):\par
+        return self.nombre\par
+\par
+class Entregable(models.Model):\par
+    nombre = models.CharField(max_length=100)\par
+    fecha_entrega = models.DateField()\par
+    entregado = models.BooleanField()\par
+\par
+    def __str__(self):\par
+        return self.nombre\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 4: Registrar la Aplicaci\'f3n\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Para que el proyecto Django reconozca AppCoder, abre el archivo settings.py en el directorio de MiProyecto y agrega AppCoder a la lista de INSTALLED_APPS:\par
+\par
+INSTALLED_APPS = [\par
+    'django.contrib.admin',\par
+    'django.contrib.auth',\par
+    'django.contrib.contenttypes',\par
+    'django.contrib.sessions',\par
+    'django.contrib.messages',\par
+    'django.contrib.staticfiles',\par
+    'AppCoder', # Agregamos nuestra aplicaci\'f3n\par
+]\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 5: Migrar los Modelos\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Para aplicar los modelos a la base de datos, ejecuta los siguientes comandos:\par
+\par
+
+\pard\li720\sa200\sl276\slmult1\b python manage.py makemigrations\par
+python manage.py migrate\par
+
+\pard\sa200\sl276\slmult1\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 6: Crear las Vistas (View)\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Las vistas manejan la l\'f3gica de negocio y determinan qu\'e9 datos se env\'edan a las plantillas. Abre el archivo views.py en el directorio de AppCoder y agrega el siguiente c\'f3digo:\par
+\par
+
+\pard\li720\sa200\sl276\slmult1\b from django.shortcuts import render, get_object_or_404\par
+from .models import Estudiante\par
+\par
+# Vista para listar estudiantes\par
+def lista_estudiantes(request):\par
+    estudiantes = Estudiante.objects.all()\par
+    return render(request, 'AppCoder/estudiantes_list.html', \{'estudiantes': estudiantes\})\par
+\par
+# Vista para detalle de un estudiante\par
+def detalle_estudiante(request, pk):\par
+    estudiante = get_object_or_404(Estudiante, pk=pk)\par
+    return render(request, 'AppCoder/estudiante_detail.html', \{'estudiante': estudiante\})\par
+
+\pard\sa200\sl276\slmult1\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 7: Crear las Plantillas (Template)\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Las plantillas definen la presentaci\'f3n de los datos. Crea un directorio llamado templates dentro del directorio AppCoder y luego crea una subcarpeta llamada AppCoder. Dentro de esta carpeta, agrega los siguientes archivos:\par
+\par
+Archivo: estudiantes_list.html\par
+\par
+
+\pard\li720\sa200\sl276\slmult1\b <!DOCTYPE html>\par
+<html>\par
+<head>\par
+    <title>Lista de Estudiantes</title>\par
+</head>\par
+<body>\par
+    <h1>Lista de Estudiantes</h1>\par
+    <ul>\par
+        \{% for estudiante in estudiantes %\}\par
+            <li>\{\{ estudiante.nombre \}\} \{\{ estudiante.apellido \}\}</li>\par
+        \{% endfor %\}\par
+    </ul>\par
+</body>\par
+</html>\par
+
+\pard\sa200\sl276\slmult1\b0 ===========================================================================\par
+Archivo: estudiante_detail.html\par
+\par
+
+\pard\li720\sa200\sl276\slmult1\b <!DOCTYPE html>\par
+<html>\par
+<head>\par
+    <title>Detalle del Estudiante</title>\par
+</head>\par
+<body>\par
+    <h1>\{\{ estudiante.nombre \}\} \{\{ estudiante.apellido \}\}</h1>\par
+    <p>Email: \{\{ estudiante.email \}\}</p>\par
+</body>\par
+</html>\par
+
+\pard\sa200\sl276\slmult1\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 8: Configurar las URLs\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Para acceder a las vistas, necesitamos configurar las URLs. Crea un archivo urls.py en el directorio de AppCoder y agrega lo siguiente:\par
+\par
+from django.urls import path\par
+from .views import lista_estudiantes, detalle_estudiante\par
+\par
+urlpatterns = [\par
+    path('estudiantes/', lista_estudiantes, name='lista_estudiantes'),\par
+    path('estudiantes/<int:pk>/', detalle_estudiante, name='detalle_estudiante'),\par
+]\par
+\par
+Luego, abre el archivo urls.py en el directorio principal de MiProyecto y agrega:\par
+\par
+from django.contrib import admin\par
+from django.urls import include, path\par
+\par
+urlpatterns = [\par
+    path('admin/', admin.site.urls),\par
+    path('appcoder/', include('AppCoder.urls')),\par
+]\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 9: Ejecutar el Servidor de Desarrollo\par
+
+\pard\sa200\sl276\slmult1\b0\fs22\par
+Finalmente, ejecuta el servidor de desarrollo para probar tu aplicaci\'f3n:\par
+\par
+python manage.py runserver\par
+\par
+Accede a las siguientes URLs para verificar:\par
+\par
+Lista de estudiantes: {{\field{\*\fldinst{HYPERLINK http://127.0.0.1:8000/appcoder/estudiantes/ }}{\fldrslt{http://127.0.0.1:8000/appcoder/estudiantes/\ul0\cf0}}}}\f0\fs22\par
+\par
+Detalle de un estudiante: {{\field{\*\fldinst{HYPERLINK http://127.0.0.1:8000/appcoder/estudiantes/1/ }}{\fldrslt{http://127.0.0.1:8000/appcoder/estudiantes/1/\ul0\cf0}}}}\f0\fs22  (Cambia 1 por el ID del estudiante que desees ver).\par
+\par
+Conclusi\'f3n\par
+\par
+Con esta gu\'eda, has aprendido a crear un proyecto Django siguiendo el patr\'f3n MTV. Esto incluye definir modelos, vistas, plantillas y configurar las URLs. Ahora puedes expandir tu aplicaci\'f3n agregando m\'e1s funcionalidades o modelos seg\'fan tus necesidades.\par
+}
+ 
