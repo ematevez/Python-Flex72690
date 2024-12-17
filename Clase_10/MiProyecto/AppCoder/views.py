@@ -1,10 +1,16 @@
-from django.shortcuts import render
-
-# Create your views here.
 from django.shortcuts import render, redirect
 from .forms import EstudianteForm, ProfesorForm
 from .models import Estudiante, Profesor
+# Create your views here.
 
+# ==================================INDEX=================================================
+
+def index(request):
+    return render(request, 'AppCoder/index.html')
+
+
+
+# =============================ESTUDIANTE=================================================
 def cargar_estudiante(request):
     if request.method == 'POST':
         form = EstudianteForm(request.POST)
@@ -17,8 +23,10 @@ def cargar_estudiante(request):
 
 def lista_estudiantes(request):
     estudiantes = Estudiante.objects.all()
-    return render(request, 'AppCoder/estudiantes_list.html', {'estudiantes': estudiantes})
+    return render(request, 'AppCoder/lista_estudiantes.html', {'estudiantes': estudiantes})
 
+
+# =============================PROFESOR=================================================
 def cargar_profesor(request):
     if request.method == 'POST':
         form = ProfesorForm(request.POST)
@@ -31,8 +39,4 @@ def cargar_profesor(request):
 
 def lista_profesores(request):
     profesores = Profesor.objects.all()
-    return render(request, 'AppCoder/profesores_list.html', {'profesores': profesores})
-
-
-def index(request):
-    return render(request, 'AppCoder/index.html')
+    return render(request, 'AppCoder/lista_profesores.html', {'profesores': profesores})
