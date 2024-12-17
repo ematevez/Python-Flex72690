@@ -95,7 +95,7 @@ python manage.py migrate\par
 Las vistas manejan la l\'f3gica de negocio y determinan qu\'e9 datos se env\'edan a las plantillas. Abre el archivo views.py en el directorio de AppCoder y agrega el siguiente c\'f3digo:\par
 \par
 
-\pard\li720\sa200\sl276\slmult1\b from django.shortcuts import render, get_object_or_404\par
+\pard\li720\sa200\sl276\slmult1\b from django.shortcuts import render, \par
 from .models import Estudiante\par
 \par
 # Vista para listar estudiantes\par
@@ -137,7 +137,7 @@ Archivo: estudiantes_list.html\par
 Archivo: estudiante_detail.html\par
 \par
 
-\pard\li720\sa200\sl276\slmult1\b <!DOCTYPE html>\par
+\pard\li720\sa200\sl276\slmult1\ul\b <!DOCTYPE html>\par
 <html>\par
 <head>\par
     <title>Detalle del Estudiante</title>\par
@@ -148,20 +148,13 @@ Archivo: estudiante_detail.html\par
 </body>\par
 </html>\par
 
-\pard\sa200\sl276\slmult1\b0\par
+\pard\sa200\sl276\slmult1\ulnone\b0\par
 
 \pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li360\sa200\sl276\slmult1\b\fs24 Paso 8: Configurar las URLs\par
 
 \pard\sa200\sl276\slmult1\b0\fs22\par
 Para acceder a las vistas, necesitamos configurar las URLs. Crea un archivo urls.py en el directorio de AppCoder y agrega lo siguiente:\par
 \par
-from django.urls import path\par
-from .views import lista_estudiantes, detalle_estudiante\par
-\par
-urlpatterns = [\par
-    path('estudiantes/', lista_estudiantes, name='lista_estudiantes'),\par
-    path('estudiantes/<int:pk>/', detalle_estudiante, name='detalle_estudiante'),\par
-]\par
 \par
 Luego, abre el archivo urls.py en el directorio principal de MiProyecto y agrega:\par
 \par
