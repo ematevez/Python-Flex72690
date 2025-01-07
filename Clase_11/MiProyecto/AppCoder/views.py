@@ -3,7 +3,6 @@ from .forms import EstudianteForm, ProfesorForm
 from .models import Estudiante, Profesor
 from django.db.models import Q
 
-# Create your views here.
 
 # ==================================INDEX=================================================
 
@@ -12,16 +11,20 @@ def index(request):
 
 
 
-# =============================ESTUDIANTE=================================================
+# =============================ESTUDIANTE=CARGA ESTUDIANTE================================================
 def cargar_estudiante(request):
     if request.method == 'POST':
         form = EstudianteForm(request.POST)
         if form.is_valid():
             form.save()
             return redirect('lista_estudiantes')
+            # return redirect('index')
     else:
         form = EstudianteForm()
     return render(request, 'AppCoder/estudiante_form.html', {'form': form})
+
+
+# ==========================LISTA===ESTUDIANTE=================================================
 
 def lista_estudiantes(request):
     estudiantes = Estudiante.objects.all()
