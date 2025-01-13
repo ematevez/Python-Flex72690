@@ -23,3 +23,11 @@
 ### Clase 7 - Programación Orientada a Objetos II y Herencias
 
 ### Clase 8: Manejo de Archivos y Datos en Python
+
+### Clase 9: Introducción a Git y GitHub
+
+### Clase 10: Playground Intermedio Parte I
+
+### Clase 11: Playground Intermedio parte II
+
+### Clase 12: Playground Avanzado

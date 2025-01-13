@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect
 from .forms import EstudianteForm, ProfesorForm
 from .models import Estudiante, Profesor
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 
 # ==================================INDEX=================================================
 
+@login_required
 def index(request):
     return render(request, 'AppCoder/index.html')
 

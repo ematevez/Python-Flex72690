@@ -1,0 +1,17 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}Post Formulario{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+<h1>{{ view.object|default:"Crear Post" }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'post_list' %}">Cancelar</a>
+{% endblock %}

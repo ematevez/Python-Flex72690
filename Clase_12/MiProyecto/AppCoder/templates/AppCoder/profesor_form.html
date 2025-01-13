@@ -1,0 +1,29 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}
+    Cargar Profesor
+    {% endblock %}
+</title>
+
+
+{% block cuerpo %}
+<h1>Cargar Profesores</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Guardar</button>
+</form>
+<a href="{% url 'index'  %}" class ="btn btn-primary">Inicio </a>
+
+
+
+
+{% endblock %}
+
+
+
+
+
+

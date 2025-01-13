@@ -1,0 +1,19 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}Post Lista{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>Posts</h1>
+    <a href="{% url 'post_create' %}">Crear nuevo post</a>
+    <ul>
+        {% for post in posts %}
+        <li>
+            <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

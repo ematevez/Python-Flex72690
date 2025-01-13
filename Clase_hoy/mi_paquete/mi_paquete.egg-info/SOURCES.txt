@@ -1,9 +1,0 @@
-setup.py
-mi_paquete/__init__.py
-mi_paquete/main.py
-mi_paquete/modulo1.py
-mi_paquete/modulo2.py
-mi_paquete.egg-info/PKG-INFO
-mi_paquete.egg-info/SOURCES.txt
-mi_paquete.egg-info/dependency_links.txt
-mi_paquete.egg-info/top_level.txt
