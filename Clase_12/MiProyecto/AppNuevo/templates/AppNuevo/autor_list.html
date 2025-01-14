@@ -1,0 +1,26 @@
+
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}Listado de Autores{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>Autores</h1>
+    <a class="btn btn-info" href="{% url 'autor_create' %}">Crear nuevo Autor</a>
+    <ul>
+        {% for autor in autors %}
+        <li>
+            <a href="{% url 'autor_detail' autor.pk %}">{{ autor.nombre }}</a>
+        </li>
+        {% comment %} <li>
+            <a class="btn btn-info" href="{% url 'autor_update' object.pk %}">Editar</a>
+        </li>
+        <li>
+            <a class="btn btn-danger" href="{% url 'autor_delete' object.pk %}">Eliminar</a>
+        </li> {% endcomment %}
+        {% endfor %}
+    </ul>
+{% endblock %}

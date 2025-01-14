@@ -2,16 +2,16 @@
 {% load static %}
 
 <title>
-    {% block titulo %}Post Actualizar{% endblock %}
+    {% block titulo %} Actualizar post{% endblock %}
 </title>
 
 
 {% block cuerpo %}
-<h1>Actualizar Post</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Actualizar</button>
-</form>
-<a href="{% url 'post_list' %}">Cancelar</a>
+    <h1>Actualizar Post</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="{% url 'post_list' %}">Cancelar</a>
 {% endblock %}

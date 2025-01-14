@@ -28,21 +28,24 @@
                         <a class="nav-link" href="{% url 'lista_profesores' %}">Lista de Profesores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'post_list' %}">Blog</a>
+                        <a class="nav-link text-success" href="{% url 'post_list' %}">Blog</a>
                     </li>
-                    <ul class="navbar-nav">
-                        {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{% url 'autor_list' %}">Autor</a>
+                    </li>
+                    {% if user.is_authenticated %}
                             <form method="post" action="{% url 'logout' %}">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-link nav-link" style="border: none; padding: 0;">Cerrar Sesión</button>
                             </form>
                     
-                        {% else %}
+                    {% else %}
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
                             </li>
-                        {% endif %}
-                    </ul>
+                    {% endif %}
+
+
                 </ul>
             </div>
         </div>
@@ -74,6 +77,23 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container mt-5">
+  
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+            <label class="btn btn-outline-dark" for="btnradio1"><a href="{% url 'post_list' %}">Blog</a></label>
+        
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btnradio2"><a href="{% url 'autor_list' %}">Autor</a></label>
+        
+            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+            <label class="btn btn-outline-dark" for="btnradio3">Otro...</label>
+        </div>
+    </div>
+
     <div class="container mt-5">
         <p class="text-center">Utiliza el buscador para encontrar estudiantes o profesores.</p>
     

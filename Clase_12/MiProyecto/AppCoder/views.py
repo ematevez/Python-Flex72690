@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 
 
 # ==================================INDEX=================================================
-
 @login_required
 def index(request):
     return render(request, 'AppCoder/index.html')
@@ -34,6 +33,7 @@ def lista_estudiantes(request):
 
 
 # =============================PROFESOR=================================================
+@login_required
 def cargar_profesor(request):
     if request.method == 'POST':
         form = ProfesorForm(request.POST)

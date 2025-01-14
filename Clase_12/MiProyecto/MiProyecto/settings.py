@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'AppCoder',
     'AppBlog',
     'AppTienda',
+    'AppNuevo',
 ]
 
 MIDDLEWARE = [
@@ -125,7 +126,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Redirigir al login si un usuario no está autenticado
-LOGIN_URL = '/login/'
+
+LOGIN_URL = 'login/' # Redirigir al login si un usuario no está autenticado
 LOGIN_REDIRECT_URL = '/'  # Dónde se redirige tras el login
 LOGOUT_REDIRECT_URL = '/'  # Dónde se redirige tras el logout

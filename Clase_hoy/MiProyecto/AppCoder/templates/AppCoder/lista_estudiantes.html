@@ -1,0 +1,28 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}
+        Listar Estudiantes
+    {% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>Lista de Estudiantes</h1>
+    <ul>
+        {% for estudiante in estudiantes %}   
+            <li>{{estudiante.nombre}} {{estudiante.apellido}}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'cargar_estudiante' %} "class="btn btn-primary" >Agregar Estudiante</a>
+    <a href="{% url 'index'  %}" class="btn btn-secondary">Inicio</a>
+{% endblock %}
+
+
+
+
+
+
+
+

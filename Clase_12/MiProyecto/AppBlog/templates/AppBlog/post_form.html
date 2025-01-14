@@ -2,16 +2,17 @@
 {% load static %}
 
 <title>
-    {% block titulo %}Post Formulario{% endblock %}
+    {% block titulo %}Crear Post{% endblock %}
 </title>
 
 
 {% block cuerpo %}
-<h1>{{ view.object|default:"Crear Post" }}</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
-</form>
-<a href="{% url 'post_list' %}">Cancelar</a>
+    <h1>"Crear Post"</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-success" type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'post_list' %}" class="btn btn-danger">Cancelar</a>
+
 {% endblock %}

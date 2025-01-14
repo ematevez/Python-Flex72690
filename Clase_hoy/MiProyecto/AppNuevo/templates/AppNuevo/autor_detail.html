@@ -1,0 +1,17 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}Detalle del Autor{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>Nombre: {{ object.nombre }}</h1>
+    <p>Descripcion: {{ object.descripcion }}</p>
+    <p>Contacto: {{ object.correo }}</p>
+   
+    <a href="{% url 'autor_update' object.pk %}">Editar</a>
+    <a href="{% url 'autor_delete' object.pk %}">Eliminar</a>
+    <a href="{% url 'autor_list' %}">Volver</a>
+{% endblock %}
