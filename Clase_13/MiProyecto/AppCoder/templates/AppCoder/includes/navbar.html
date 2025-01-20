@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">AppCoder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cargar_estudiante' %}">Cargar Estudiante</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lista_estudiantes' %}">Lista de Estudiantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'cargar_profesor' %}">Cargar Profesor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lista_profesores' %}">Lista de Profesores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-success" href="{% url 'post_list' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{% url 'autor_list' %}">Autor</a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item d-flex align-items-center">
+                        <img src="{{ user.profile.avatar.url|default:'/media/avatars/1.png' }}" 
+                             alt="Avatar" 
+                             class="rounded-circle me-2" 
+                             width="40" 
+                             height="40">
+                        <a class="nav-link text-danger" href="{% url 'editarperfil' %}">Editar Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <form method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link nav-link" style="border: none; padding: 0; color: white;">Cerrar Sesión</button>
+                        </form>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
