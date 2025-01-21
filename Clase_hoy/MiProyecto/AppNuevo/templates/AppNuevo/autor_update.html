@@ -1,0 +1,17 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %} Actualizar Autor{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>Actualizar Autor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Actualizar</button>
+    </form>
+    <a href="{% url 'autor_list' %}">Cancelar</a>
+{% endblock %}

@@ -1,0 +1,254 @@
+2025-01-20 03:56:20 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 03:56:19 2025] ***
+2025-01-20 03:56:20 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 03:56:20 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 03:56:20 nodename: blue-liveweb25
+2025-01-20 03:56:20 machine: x86_64
+2025-01-20 03:56:20 clock source: unix
+2025-01-20 03:56:20 pcre jit disabled
+2025-01-20 03:56:20 detected number of CPU cores: 4
+2025-01-20 03:56:20 current working directory: /home/thiagotevez
+2025-01-20 03:56:20 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 03:56:20 *** dumping internal routing table ***
+2025-01-20 03:56:20 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 03:56:20 *** end of the internal routing table ***
+2025-01-20 03:56:20 chdir() to /home/thiagotevez/
+2025-01-20 03:56:20 your processes number limit is 256
+2025-01-20 03:56:20 your memory page size is 4096 bytes
+2025-01-20 03:56:20 detected max file descriptor number: 123456
+2025-01-20 03:56:20 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 03:56:20 567 entry found
+2025-01-20 03:56:20 lock engine: pthread robust mutexes
+2025-01-20 03:56:20 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 03:56:20 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 3
+2025-01-20 03:56:20 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 03:56:20 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 03:56:20 Python main interpreter initialized at 0x5cf07a14cd40
+2025-01-20 03:56:20 your server socket listen backlog is limited to 100 connections
+2025-01-20 03:56:20 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 03:56:20 setting request body buffering size to 65536 bytes
+2025-01-20 03:56:20 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 03:56:20 *** Operational MODE: single process ***
+2025-01-20 03:56:20 initialized 38 metrics
+2025-01-20 03:56:20 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5cf07a14cd40 pid: 1 (default app)
+2025-01-20 03:56:20 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 03:56:20 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-01-20 03:56:20 spawned uWSGI worker 1 (pid: 3, cores: 1)
+2025-01-20 03:56:20 metrics collector thread started
+2025-01-20 03:56:20 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 03:56:23 announcing my loyalty to the Emperor...
+2025-01-20 03:58:52 Mon Jan 20 03:58:52 2025 - received message 0 from emperor
+2025-01-20 03:58:52 SIGINT/SIGTERM received...killing workers...
+2025-01-20 03:58:53 worker 1 buried after 1 seconds
+2025-01-20 03:58:53 goodbye to uWSGI.
+2025-01-20 03:58:53 VACUUM: unix socket /var/sockets/thiagotevez.pythonanywhere.com/socket removed.
+2025-01-20 03:58:58 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 03:58:57 2025] ***
+2025-01-20 03:58:58 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 03:58:58 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 03:58:58 nodename: blue-liveweb25
+2025-01-20 03:58:58 machine: x86_64
+2025-01-20 03:58:58 clock source: unix
+2025-01-20 03:58:58 pcre jit disabled
+2025-01-20 03:58:58 detected number of CPU cores: 4
+2025-01-20 03:58:58 current working directory: /home/thiagotevez
+2025-01-20 03:58:58 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 03:58:58 *** dumping internal routing table ***
+2025-01-20 03:58:58 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 03:58:58 *** end of the internal routing table ***
+2025-01-20 03:58:58 chdir() to /home/thiagotevez/
+2025-01-20 03:58:58 your processes number limit is 256
+2025-01-20 03:58:58 your memory page size is 4096 bytes
+2025-01-20 03:58:58 detected max file descriptor number: 123456
+2025-01-20 03:58:58 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 03:58:58 567 entry found
+2025-01-20 03:58:58 lock engine: pthread robust mutexes
+2025-01-20 03:58:58 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 03:58:58 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 3
+2025-01-20 03:58:58 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 03:58:58 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 03:58:58 Python main interpreter initialized at 0x643500e15d40
+2025-01-20 03:58:58 your server socket listen backlog is limited to 100 connections
+2025-01-20 03:58:58 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 03:58:58 setting request body buffering size to 65536 bytes
+2025-01-20 03:58:58 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 03:58:58 *** Operational MODE: single process ***
+2025-01-20 03:58:58 initialized 38 metrics
+2025-01-20 03:58:58 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x643500e15d40 pid: 1 (default app)
+2025-01-20 03:58:58 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 03:58:58 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-01-20 03:58:58 spawned uWSGI worker 1 (pid: 3, cores: 1)
+2025-01-20 03:58:58 metrics collector thread started
+2025-01-20 03:58:58 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 03:58:58 announcing my loyalty to the Emperor...
+2025-01-20 03:59:03 Not Found: /favicon.ico
+2025-01-20 04:00:16 Mon Jan 20 04:00:16 2025 - received message 0 from emperor
+2025-01-20 04:00:16 SIGINT/SIGTERM received...killing workers...
+2025-01-20 04:00:17 worker 1 buried after 1 seconds
+2025-01-20 04:00:17 goodbye to uWSGI.
+2025-01-20 04:00:17 unlink(): No such file or directory [core/uwsgi.c line 1662]
+2025-01-20 04:01:09 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 04:01:09 2025] ***
+2025-01-20 04:01:09 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 04:01:09 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 04:01:09 nodename: blue-liveweb29
+2025-01-20 04:01:09 machine: x86_64
+2025-01-20 04:01:09 clock source: unix
+2025-01-20 04:01:09 pcre jit disabled
+2025-01-20 04:01:09 detected number of CPU cores: 4
+2025-01-20 04:01:09 current working directory: /home/thiagotevez
+2025-01-20 04:01:09 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 04:01:09 *** dumping internal routing table ***
+2025-01-20 04:01:09 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 04:01:09 *** end of the internal routing table ***
+2025-01-20 04:01:09 chdir() to /home/thiagotevez/
+2025-01-20 04:01:09 your processes number limit is 256
+2025-01-20 04:01:09 your memory page size is 4096 bytes
+2025-01-20 04:01:09 detected max file descriptor number: 123456
+2025-01-20 04:01:09 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 04:01:09 567 entry found
+2025-01-20 04:01:09 lock engine: pthread robust mutexes
+2025-01-20 04:01:09 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 04:01:09 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 3
+2025-01-20 04:01:09 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 04:01:09 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 04:01:09 Python main interpreter initialized at 0x59ab85ac8d40
+2025-01-20 04:01:09 your server socket listen backlog is limited to 100 connections
+2025-01-20 04:01:09 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 04:01:09 setting request body buffering size to 65536 bytes
+2025-01-20 04:01:09 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 04:01:09 *** Operational MODE: single process ***
+2025-01-20 04:01:09 initialized 38 metrics
+2025-01-20 04:01:09 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x59ab85ac8d40 pid: 1 (default app)
+2025-01-20 04:01:09 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 04:01:09 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-01-20 04:01:09 spawned uWSGI worker 1 (pid: 2, cores: 1)
+2025-01-20 04:01:09 metrics collector thread started
+2025-01-20 04:01:09 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 04:01:11 announcing my loyalty to the Emperor...
+2025-01-20 04:05:29 Mon Jan 20 04:05:29 2025 - *** /var/www/thiagotevez_pythonanywhere_com_wsgi.py has been touched... grace them all !!! ***
+2025-01-20 04:05:29 ...gracefully killing workers...
+2025-01-20 04:05:29 Gracefully killing worker 1 (pid: 2)...
+2025-01-20 04:05:31 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 04:05:30 2025] ***
+2025-01-20 04:05:31 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 04:05:31 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 04:05:31 nodename: blue-liveweb29
+2025-01-20 04:05:31 machine: x86_64
+2025-01-20 04:05:31 clock source: unix
+2025-01-20 04:05:31 pcre jit disabled
+2025-01-20 04:05:31 detected number of CPU cores: 4
+2025-01-20 04:05:31 current working directory: /home/thiagotevez
+2025-01-20 04:05:31 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 04:05:31 *** dumping internal routing table ***
+2025-01-20 04:05:31 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 04:05:31 *** end of the internal routing table ***
+2025-01-20 04:05:31 chdir() to /home/thiagotevez/
+2025-01-20 04:05:31 your processes number limit is 256
+2025-01-20 04:05:31 your memory page size is 4096 bytes
+2025-01-20 04:05:31 detected max file descriptor number: 123456
+2025-01-20 04:05:31 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 04:05:31 567 entry found
+2025-01-20 04:05:31 lock engine: pthread robust mutexes
+2025-01-20 04:05:31 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 04:05:31 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 8
+2025-01-20 04:05:31 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 04:05:31 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 04:05:31 Python main interpreter initialized at 0x5c56ce9e30c0
+2025-01-20 04:05:31 your server socket listen backlog is limited to 100 connections
+2025-01-20 04:05:31 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 04:05:31 setting request body buffering size to 65536 bytes
+2025-01-20 04:05:31 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 04:05:31 *** Operational MODE: single process ***
+2025-01-20 04:05:31 initialized 38 metrics
+2025-01-20 04:05:31 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5c56ce9e30c0 pid: 1 (default app)
+2025-01-20 04:05:31 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 04:05:31 spawned uWSGI master process (pid: 1)
+2025-01-20 04:05:31 spawned uWSGI worker 1 (pid: 8, cores: 1)
+2025-01-20 04:05:31 metrics collector thread started
+2025-01-20 04:05:31 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 04:07:11 Mon Jan 20 04:07:11 2025 - *** /etc/uwsgi/thiagotevez.pythonanywhere.com.ini has been touched... grace them all !!! ***
+2025-01-20 04:07:11 ...gracefully killing workers...
+2025-01-20 04:07:11 Gracefully killing worker 1 (pid: 8)...
+2025-01-20 04:07:22 Mon Jan 20 04:07:22 2025 - received message 0 from emperor
+2025-01-20 04:07:22 SIGINT/SIGTERM received...killing workers...
+2025-01-20 04:07:23 worker 1 buried after 1 seconds
+2025-01-20 04:07:23 goodbye to uWSGI.
+2025-01-20 04:07:23 VACUUM: unix socket /var/sockets/thiagotevez.pythonanywhere.com/socket removed.
+2025-01-20 04:07:28 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 04:07:27 2025] ***
+2025-01-20 04:07:28 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 04:07:28 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 04:07:28 nodename: blue-liveweb29
+2025-01-20 04:07:28 machine: x86_64
+2025-01-20 04:07:28 clock source: unix
+2025-01-20 04:07:28 pcre jit disabled
+2025-01-20 04:07:28 detected number of CPU cores: 4
+2025-01-20 04:07:28 current working directory: /home/thiagotevez
+2025-01-20 04:07:28 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 04:07:28 *** dumping internal routing table ***
+2025-01-20 04:07:28 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 04:07:28 *** end of the internal routing table ***
+2025-01-20 04:07:28 chdir() to /home/thiagotevez/Python-Flex72690/Clase_13/MiProyecto
+2025-01-20 04:07:28 your processes number limit is 256
+2025-01-20 04:07:28 your memory page size is 4096 bytes
+2025-01-20 04:07:28 detected max file descriptor number: 123456
+2025-01-20 04:07:28 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 04:07:28 567 entry found
+2025-01-20 04:07:28 lock engine: pthread robust mutexes
+2025-01-20 04:07:28 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 04:07:28 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 3
+2025-01-20 04:07:28 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 04:07:28 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 04:07:28 Python main interpreter initialized at 0x5e93509c7d40
+2025-01-20 04:07:28 your server socket listen backlog is limited to 100 connections
+2025-01-20 04:07:28 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 04:07:28 setting request body buffering size to 65536 bytes
+2025-01-20 04:07:28 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 04:07:28 *** Operational MODE: single process ***
+2025-01-20 04:07:28 initialized 38 metrics
+2025-01-20 04:07:28 WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5e93509c7d40 pid: 1 (default app)
+2025-01-20 04:07:28 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 04:07:28 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-01-20 04:07:28 spawned uWSGI worker 1 (pid: 3, cores: 1)
+2025-01-20 04:07:28 metrics collector thread started
+2025-01-20 04:07:28 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 04:07:28 announcing my loyalty to the Emperor...
+2025-01-20 04:11:12 Mon Jan 20 04:11:12 2025 - received message 0 from emperor
+2025-01-20 04:11:12 SIGINT/SIGTERM received...killing workers...
+2025-01-20 04:11:13 worker 1 buried after 1 seconds
+2025-01-20 04:11:13 goodbye to uWSGI.
+2025-01-20 04:11:13 VACUUM: unix socket /var/sockets/thiagotevez.pythonanywhere.com/socket removed.
+2025-01-20 04:11:19 *** Starting uWSGI 2.0.20 (64bit) on [Mon Jan 20 04:11:19 2025] ***
+2025-01-20 04:11:19 compiled with version: 9.4.0 on 22 July 2022 18:35:26
+2025-01-20 04:11:19 os: Linux-6.5.0-1022-aws #22~22.04.1-Ubuntu SMP Fri Jun 14 16:31:00 UTC 2024
+2025-01-20 04:11:19 nodename: blue-liveweb29
+2025-01-20 04:11:19 machine: x86_64
+2025-01-20 04:11:19 clock source: unix
+2025-01-20 04:11:19 pcre jit disabled
+2025-01-20 04:11:19 detected number of CPU cores: 4
+2025-01-20 04:11:19 current working directory: /home/thiagotevez
+2025-01-20 04:11:19 detected binary path: /usr/local/bin/uwsgi
+2025-01-20 04:11:19 *** dumping internal routing table ***
+2025-01-20 04:11:19 [rule: 0] subject: path_info regexp: \.svgz$ action: addheader:Content-Encoding:gzip
+2025-01-20 04:11:19 *** end of the internal routing table ***
+2025-01-20 04:11:19 chdir() to /home/thiagotevez/Python-Flex72690/Clase_13/MiProyecto
+2025-01-20 04:11:19 your processes number limit is 256
+2025-01-20 04:11:19 your memory page size is 4096 bytes
+2025-01-20 04:11:19 detected max file descriptor number: 123456
+2025-01-20 04:11:19 building mime-types dictionary from file /etc/mime.types...
+2025-01-20 04:11:19 567 entry found
+2025-01-20 04:11:19 lock engine: pthread robust mutexes
+2025-01-20 04:11:19 thunder lock: disabled (you can enable it with --thunder-lock)
+2025-01-20 04:11:19 uwsgi socket 0 bound to UNIX address /var/sockets/thiagotevez.pythonanywhere.com/socket fd 3
+2025-01-20 04:11:19 Python version: 3.8.10 (default, Jun 22 2022, 20:18:18)  [GCC 9.4.0]
+2025-01-20 04:11:19 *** Python threads support is disabled. You can enable it with --enable-threads ***
+2025-01-20 04:11:19 Python main interpreter initialized at 0x6237e5181d40
+2025-01-20 04:11:19 your server socket listen backlog is limited to 100 connections
+2025-01-20 04:11:19 your mercy for graceful operations on workers is 60 seconds
+2025-01-20 04:11:19 setting request body buffering size to 65536 bytes
+2025-01-20 04:11:19 mapped 334256 bytes (326 KB) for 1 cores
+2025-01-20 04:11:19 *** Operational MODE: single process ***
+2025-01-20 04:11:19 initialized 38 metrics
+2025-01-20 04:11:19 WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x6237e5181d40 pid: 1 (default app)
+2025-01-20 04:11:19 *** uWSGI is running in multiple interpreter mode ***
+2025-01-20 04:11:19 gracefully (RE)spawned uWSGI master process (pid: 1)
+2025-01-20 04:11:19 spawned uWSGI worker 1 (pid: 3, cores: 1)
+2025-01-20 04:11:19 metrics collector thread started
+2025-01-20 04:11:19 spawned 2 offload threads for uWSGI worker 1
+2025-01-20 04:11:19 announcing my loyalty to the Emperor...

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Profesor</title>
+</head>
+<body>
+    <h1>Lista de Profesor</h1>
+    <ul>
+        {% for profesor in profesores %}
+        <li>{{ profesor.nombre }} {{ profesor.apellido }} - {{ profesor.email }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'cargar_profesor' %}">Agregar Profesor</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends "AppCoder/index.html" %}
+{% load static %}
+
+<title>
+    {% block titulo %}Detalle del post{% endblock %}
+</title>
+
+
+{% block cuerpo %}
+    <h1>{{ object.title }}</h1>
+    <p>{{ object.content }}</p>
+    <p><strong>Autor:</strong> {{ object.author }}</p>
+    <a href="{% url 'post_update' object.pk %}">Editar</a>
+    <a href="{% url 'post_delete' object.pk %}">Eliminar</a>
+    <a href="{% url 'post_list' %}">Volver</a>
+{% endblock %}
